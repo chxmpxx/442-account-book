@@ -41,7 +41,9 @@ export default {
         category: '',
         memo: ''
       },
-      total: 0
+      total: 850,
+      inc: 3200,
+      exp: -2350
     }
   },
 
@@ -69,19 +71,25 @@ export default {
       }
     },
     addInput() {
+      this.form.amount = Number(this.form.amount)
       if(this.type === -1){
-        this.form.amount = '-'+this.form.amount;
+        this.form.amount = this.form.amount*-1
+        this.exp = this.exp+this.form.amount
+      }else{
+        this.inc = this.inc+this.form.amount
       }
-      this.form.amount = Number(this.form.amount);
       this.total = this.total+this.form.amount
       let payload = {
         date: this.form.date,
         amount: this.form.amount,
         category: this.form.category,
         memo: this.form.memo,
-        total: this.total
+        total: this.total,
+        inc : this.inc,
+        exp : this.exp
       }
       console.log(payload)
+      console.log(this.exp,this.inc)
       InputStore.dispatch("addInput", payload)
       this.clearForm()
     },
