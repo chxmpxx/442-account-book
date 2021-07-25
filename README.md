@@ -1,8 +1,8 @@
 # Arreeya Sungthong 6210400752
 
 ## Project setup
-npm install
-npm run build
+npm install <br />
+npm run build <br />
 npm run serve
 
 ## วิธีการรัน
@@ -19,5 +19,5 @@ npm run serve
 5. เลือกประเภทข้อมูล
 5.1) Income : เลือกประเภทรายรับ
 5.2) Expense : เลือกประเภทรายจ่าย
-6. Complete : คลิกเพื่อบันทึกข้อมูล
+6. Complete : คลิกเพื่อบันทึกข้อมูล <br />
 ตัวอย่างข้อมูล : 2021-06-06, 250, Food, Spaghetti, Expense
